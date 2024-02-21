@@ -42,7 +42,7 @@ const User = () => {
                         placeholder="Author"
                         value={authorFilter}
                         onChange={(e) => setAuthorFilter(e.target.value)}
-                        className="border border-gray-300 rounded-l px-4 py-2 w-full"
+                        className="border border-red-600 rounded-l px-4 py-2 w-full"
                     />
                 </div>
                 <div className="w-1/2 ml-2">
@@ -53,29 +53,29 @@ const User = () => {
                         placeholder="Subject"
                         value={subjectFilter}
                         onChange={(e) => setSubjectFilter(e.target.value)}
-                        className="border border-gray-300 rounded-r px-4 py-2 w-full"
+                        className="border border-red-600 rounded-r px-4 py-2 w-full"
                     />
                 </div>
             </div>
-            <button onClick={handleFilter} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button onClick={handleFilter} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                 Apply Filters
             </button>
             <table className="table-auto w-full mt-4">
                 <thead>
-                <tr>
-                    <th className="px-4 py-2">Title</th>
-                    <th className="px-4 py-2">Author</th>
-                    <th className="px-4 py-2">Subject</th>
-                    <th className="px-4 py-2">Publish Date</th>
+                <tr >
+                    <th className="px-4 py-2 bg-red-600 text-white border-4 border-red-600">Title</th>
+                    <th className="px-4 py-2 bg-red-600 text-white border-4 border-red-600">Author</th>
+                    <th className="px-4 py-2 bg-red-600 text-white border-4 border-red-600">Subject</th>
+                    <th className="px-4 py-2 bg-red-600 text-white border-4 border-red-600">Publish Date</th>
                 </tr>
                 </thead>
                 <tbody>
                 {filteredBooks.map((book, index) => (
                     <tr key={index}>
-                        <td className="border px-4 py-2">{book.title}</td>
-                        <td className="border px-4 py-2">{book.author}</td>
-                        <td className="border px-4 py-2">{book.subject}</td>
-                        <td className="border px-4 py-2">{moment(book.publishdate).format("DD-MM-YYYY")}</td>
+                        <td className="border-4 px-4 py-2 border-red-600">{book.title}</td>
+                        <td className="border-4 px-4 py-2 border-red-600">{book.author}</td>
+                        <td className="border-4 px-4 py-2 border-red-600">{book.subject}</td>
+                        <td className="border-4 px-4 py-2 border-red-600">{moment(book.publishdate).format("DD-MM-YYYY")}</td>
                     </tr>
                 ))}
                 </tbody>

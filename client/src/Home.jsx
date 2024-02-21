@@ -23,6 +23,7 @@ const Home = () => {
         try {
             const response = await axios.post('http://localhost:8080/addbook', formData);
             console.log(response.data);
+            console.log("added successfully");
             // Optionally, do something with the response
         } catch (error) {
             console.error('Error adding book:', error);
