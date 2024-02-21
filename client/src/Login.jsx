@@ -28,7 +28,7 @@ function Login() {
         // Use setTimeout to ensure that errors state has been updated before checking
         setTimeout(() => {
             if (Object.values(errors).every(error => error === "")) {
-                axios.post('http://localhost:8080/login', values)
+                axios.post('http://192.168.145.1:8080/login', values)
                     .then(res => {
                         if (res.data === "ADMIN") {
                             navigate('/home');
